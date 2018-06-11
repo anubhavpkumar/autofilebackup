@@ -1,0 +1,50 @@
+Algorithm:
+
+1.	Start	--Done. June 6th 2018
+2.	Get list of folders whose files are to be backedup	--Done. Same day
+3.	For each of those folder:				--Done
+	1.	Find the file called backuplist.log
+	2.	If Found:
+			1.	Find All files not backedup and make list "backupstage"
+		If not Found:
+			1.	Put All Files in "backupstage"
+	3.	Backup the file on Google Drive			-- Taken up as seperate Algorithm
+4.	Log all the actions in the Logfile.
+
+
+
+
+Backup Files on Google Drive
+
+Particulars:
+Name of the file that contains the backup: backupfolderlist.list and is present in the same directory.
+
+
+----------------------------------------------------------
+
+Google Drive REST API
+
+Steps Done :
+
+1. Turn ON Drive API
+2. Downloaded the Client Secret JSON file
+3. Install OAuth2Client using pip
+4. Ran the QuickStart.py
+5. For OAuth2 Tutorial : https://www.youtube.com/watch?v=CPbvxxslDTU
+
+----------------------------------------------------------
+
+Authentication Done and Google Drive is ready to use. Next step is uploading the Files on the drive.
+
+File IDs: Every file has a unique Opaque ID and they are accessed by those IDs only.
+
+The file is located with the help of a search operation and this decides the file name and its parent folder.
+
+Metadata
+
+Each file contains metadata describing the content. This includes the file name, type, creation and modification times.
+
+Some metadata fields like the file name are user-agnostic and appear the same for each user. Others, such as capabilities and viewedByMeDate contain per-user values.
+
+
+
